@@ -31,6 +31,9 @@ function addTask(){
 	taskList.appendChild(newListItem);
 	titleField.value = "";
 	descriptionField.value = "";
+	
+	//Updates current filter view 
+	filterTasks(currentFilter);
 }
 
 //Function that removes/adds crossed out effect and changes the task's completion status when checkbox changes state
