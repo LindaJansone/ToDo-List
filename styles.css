@@ -1,0 +1,56 @@
+input, textarea, button{
+	margin-bottom: 10px;
+}
+
+textarea{
+	resize: none;
+}
+
+li{
+	list-style: none;
+}
+
+.gradient{
+	/*Ensures backup option if gradiant isn't supported */
+    background: #6610f2; 
+
+    background: radial-gradient(#ffb3ff, #6417ff);
+    height: 100vh;
+	width: 100vw;
+}
+
+.todo-container {
+	/*Ensures the to-do list is centered and has a dynamic, yet proporcional size*/
+	position: absolute;
+	left: 25%;
+	top: 10%;
+	width: 50vw;
+	height: 80vh;
+	
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+	
+	/*Makes the To-Do list scrollable*/
+	overflow-y: auto;  
+}
+
+.completed{
+	/*Visual cue that the task is marked as done*/
+	text-decoration: line-through;
+	color: gray;
+}
+
+.active{
+	background-color: #eeeeee;
+	color: #23527c;
+}
+
+#taskList{
+	height: 40vh; 
+	padding-top: 10px; 
+	/*Makes the task list scrollale*/
+    overflow-y: auto;  
+    /*Ensures text doesn't overflow*/
+	word-wrap: break-word;
+}

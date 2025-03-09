@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="styles.css">
+		<title>To-Do list</title>
+	</head>
+	<body class="gradient">
+		<div class="container">				
+			<div class="todo-container ">
+			<h2>To-Do list</h2>
+				<!--New task creation fields-->
+				<input type="text" id="taskTitle" class="form-control" placeholder="Task Title">
+				<textarea id="taskDescription" class="form-control" placeholder="Task Description" rows="4"></textarea>
+				<button class="btn btn-primary" onclick="addTask()">ADD TASK</button>
+				<!--Filter tabs, default active is All-->
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link active"data-filter="All" onclick="filterTasks('All')" href="#">ALL</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-filter="Active" onclick="filterTasks('Active')" href="#">ACTIVE</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-filter="Completed" onclick="filterTasks('Completed')" href="#">COMPLETED</a>
+					</li>
+				</ul>
+				<!--Unorder list where new tasks will be added to-->
+				<ul class="list-group mt-3" id="taskList">
+				
+				</ul>
+			</div>
+		</div>
+		<script src="scripts.js"></script>
+	</body>
+</html>
